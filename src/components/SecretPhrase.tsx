@@ -4,11 +4,7 @@ import { playSound } from "./util"
 function SecretPhrase({setMode}: any) {
 
   useEffect(()=>{
-    let first = playSound("passphrase_accepted")
-
-    first.addEventListener("ended", ()=> {
-      playSound("we_have_reason_to_believe")
-    })
+    playSound("passphrase_accepted")
   }, [])
 
   return (

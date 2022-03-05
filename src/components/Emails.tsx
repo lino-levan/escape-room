@@ -40,11 +40,7 @@ function Emails({setMode}: any) {
   const [displayedEmail, setDisplayedEmail] = useState<any>(null)
 
   useEffect(()=>{
-    let first = playSound('incredible_job_agent')
-
-    first.addEventListener('ended', ()=> {
-      playSound('as_always')
-    })
+    playSound('incredible_job_agent')
   }, [])
 
 

@@ -8,11 +8,7 @@ function Padlock({setMode}: any) {
   const orange = useRef(null)
 
   useEffect(()=>{
-    let first = playSound("i_believe_you")
-
-    first.addEventListener("ended", ()=> {
-      playSound("theres_only_one_thing")
-    })
+    playSound("i_believe_you")
   }, [])
   
   return (

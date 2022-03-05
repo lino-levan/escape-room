@@ -4,14 +4,7 @@ import { playSound } from "./util"
 function Voice({setMode}: any) {
 
   useEffect(()=>{
-    let first = playSound("ive_been_expecting_you_agent")
-
-    first.addEventListener("ended", ()=> {
-      let second = playSound("he_can_hear_you_now")
-      second.addEventListener("ended", ()=> {
-        playSound("dont_worry_youll")
-      })
-    })
+    playSound("ive_been_expecting_you_agent")
 
     setTimeout(()=>{
       setMode(3)
