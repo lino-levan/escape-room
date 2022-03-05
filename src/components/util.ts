@@ -26,6 +26,7 @@ const sounds: any = {
 
 let audio: HTMLAudioElement;
 
+// a little hack to get around stupid web standards
 export function setAudio() {
   audio = new Audio()
 }

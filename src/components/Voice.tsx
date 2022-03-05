@@ -12,13 +12,17 @@ function Voice({setMode}: any) {
         playSound("dont_worry_youll")
       })
     })
+
+    setTimeout(()=>{
+      setMode(3)
+    }, 1000 * 60 * 3)
   }, [])
 
   return (
     <div className="h-min w-min">
-      <h1>Speak.</h1>
-
-      <button onClick={()=>setMode(3)}>Skip</button>
+      <h1 onClick={()=>{
+        setMode(3)
+      }}>Speak.</h1>
     </div>
   )
 }
