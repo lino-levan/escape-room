@@ -24,8 +24,14 @@ const sounds: any = {
   we_have_reason_to_believe
 }
 
+let audio: HTMLAudioElement;
+
+export function setAudio() {
+  audio = new Audio()
+}
+
 export function playSound(id: string) {
-  let audio = new Audio(sounds[id]);
+  audio.src = sounds[id]
   audio.play();
 
   return audio
